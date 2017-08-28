@@ -12,7 +12,7 @@ $('form').on('submit', function () {
 		let searchInput = $('#search').val();
 		console.log(searchInput);	
  
-  $('form')[0].reset() // for some reason this feature is not working 
+  $('form')[0].reset(); // for some reason this feature is not working 
   $('#results').empty();
  $.ajax({
     type: "GET",
