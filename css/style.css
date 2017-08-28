@@ -1,1 +1,8 @@
-/* put custom styles in this file */
+body {
+	background-image: url('http://promusicmagazine.com/wp-content/uploads/2014/06/amazon.jpg');
+}
+
+.text-center {
+	color: green;
+	outline: black;
+}
