@@ -9,11 +9,11 @@ $(document).ready( function() {
 $('form').on('submit', function () {
 	//This function will get the information for the artist upon 
 		event.preventDefault();
-		searchInput = $('#search').val();
+		let searchInput = $('#search').val();
 		console.log(searchInput);	
  
   $('form')[0].reset() // for some reason this feature is not working 
-
+  $('#results').empty();
  $.ajax({
     type: "GET",
     url: "https://api.spotify.com/v1/search",
@@ -22,7 +22,7 @@ $('form').on('submit', function () {
         type: type
     },
     headers: {
-        "Authorization": "Bearer BQBUXlPUX-neTXb883Dk-amaev2g3hU3WQtBMTNOp4e2nZy71djELoFwoWdRuonjPHBy1uj-lSI1pSRTLTdw-Q"
+        "Authorization": "Bearer BQAAjEwkvm5ZWHJhJLYzRqu2ojBvShZtbDJWIvnWy_BCZAUhbAEo1hWlS3aoDCurrBYj9OhUi8a0LCzjAtU7nQ"
     }
 }).then(function (data) {
 	
